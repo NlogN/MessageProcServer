@@ -2,7 +2,7 @@ package server;
 
 import java.io.IOException;
 
-// the object of the class defines the Server state 
+// the object of the class defines the state of the server
 public enum ServerState {
 
 	WAITING {
@@ -13,7 +13,7 @@ public enum ServerState {
 		
 		@Override
 		public String serverStatus() {
-			return "Processing";
+			return "Waiting";
 		}
 
 		@Override
@@ -28,8 +28,8 @@ public enum ServerState {
 		}
 		
 		@Override
-		public String serverStatus() {
-			return "Sending";
+		public String serverStatus() {			
+			return "Processing";
 		}
 
 		@Override
@@ -54,8 +54,8 @@ public enum ServerState {
 		}
 		
 		@Override
-		public String serverStatus() {
-			return "Waiting";
+		public String serverStatus() {			
+			return "Sending";
 		}
 
 		@Override
